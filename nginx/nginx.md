@@ -421,7 +421,8 @@ server 192.168.0.15 weight=10;
 } 
 ```
 - IP_hash
-根据请求者ip的hash值将请求发送到后台服务器中，可以保证来自同一ip的请求被打到固定的机器上，可以解决session问题
+根据请求者ip的hash值将请求发送到后台服务器中，可以保证来自同一ip的请求被打到固定的机器上，可以解决session问题。
+使用ip_hash的注意点：不能把后台服务器直接移除，只能标记 down
 ```python
 upstream bakend {    
 ip_hash;    
@@ -429,4 +430,76 @@ server 192.168.0.14:88;
 server 192.168.0.15:80;    
 }
 ```
+- 一致性hash算法
+  - 因为对于hash(k)的范围在int范围，所以我们将0~2^32作为一个环。其步骤为：
+  - 1.求出每个服务器的hash（服务器ip）值，将其配置到一个 0~2^n 的圆环上（n通常取32）。
+  - 2.用同样的方法求出待存储对象的主键 hash值，也将其配置到这个圆环上，然后从数据映射到的位置开始顺时针查找，将数据分布到找到的第一个服务器节点上。
+- url_hash
+根据每次请求的url地址，hash后访问到固定的服务器节点。
+- least_conn 最少连接数
+```python
+upstream tomcats {
+# url hash
+hash $request_uri;
+# 最少连接数
+# least_conn
+    server 192.168.1.173:8080;
+    server 192.168.1.174:8080;
+    server 192.168.1.175:8080;
+}
+server {
+    listen 80;
+    server_name www.tomcats.com;
+    location / {
+        proxy_pass http://tomcats;
+    }
+}
+```
 
+
+### upstream的指令参数
+- max_conns 节点的最大连接数
+- slow_start 缓慢启动时间 商业版本使用
+- down 节点下线（不可用状态）
+- backup 备用节点（只有当前使用的全部节点挂掉后才会启用）
+- max_fails 允许的最大失败数（达到最大失败数后，被认为宕机）
+- fail_timeout 超过最大失败数后的等待时间（失败后，被认为宕机，等待时间后重新挂起）
+
+### Keepalived 提高吞吐量（慎用）
+- keepalived ： 设置长连接处理的数量
+- proxy_http_version ：设置长连接http版本为1.1
+- proxy_set_header ：清除connection header 信息
+```python
+upstream tomcats {
+    # server 192.168.1.173:8080 max_fails=2 fail_timeout=1s;
+    server 192.168.1.190:8080;
+    # server 192.168.1.174:8080 weight=1;
+    # server 192.168.1.175:8080 weight=1;
+    keepalive 32;
+}
+server {
+    listen 80;
+    server_name www.tomcats.com;
+    location / {
+        proxy_pass http://tomcats;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+    }
+}
+```
+### Nginx控制浏览器缓存
+```python
+# proxy_cache_path 设置缓存目录
+# keys_zone 设置共享内存以及占用空间大小
+# max_size 设置缓存大小
+# inactive 超过此时间则被清理
+# use_temp_path 临时目录，使用后会影响nginx性能
+proxy_cache_path /usr/local/nginx/upstream_cache keys_zone=mycache:5m max_size=1g inactive=1m use_temp_path=
+location / {
+proxy_pass http://tomcats;
+# 启用缓存，和keys_zone一致
+proxy_cache mycache;
+# 针对200和304状态码缓存时间为8小时
+proxy_cache_valid 200 304 8h;
+}
+```
