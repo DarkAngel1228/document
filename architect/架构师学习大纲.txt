@@ -1,9 +1,0 @@
-nginx
-	1.反向代理 负载均衡算法（默认轮询、权重、哈希）
-	2.进程模型 AIO/BIO/NIO
-	3.日志切割 shell+crontab-e
-	4.Gzip压缩静态文件+location匹配规则
-	5.解决跨域问题、配置静态资源防盗链
-	6.nginx+tomcat配置集群
-	7.JMeter测试：异常率、吞吐量、最大QPS
-
