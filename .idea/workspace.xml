@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5e7cc3f-9c0b-4657-96ce-c7dd2d607bac" name="Default Changelist" comment="Keepalived高可用">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+  </component>
+  <component name="ProjectId" id="20JeuFGMj22IKkQWCEH5A3d6G0h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5e7cc3f-9c0b-4657-96ce-c7dd2d607bac" name="Default Changelist" comment="" />
+      <created>1635767338763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635767338763</updated>
+      <workItem from="1635767339871" duration="7868000" />
+      <workItem from="1635808278133" duration="1784000" />
+      <workItem from="1635810079624" duration="472000" />
+    </task>
+    <task id="LOCAL-00001" summary="忽略">
+      <created>1635769934213</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635769934213</updated>
+    </task>
+    <task id="LOCAL-00002" summary="nginx">
+      <created>1635769993422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635769993422</updated>
+    </task>
+    <task id="LOCAL-00003" summary="nginx">
+      <created>1635770462124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635770462124</updated>
+    </task>
+    <task id="LOCAL-00004" summary="nginx">
+      <created>1635770500616</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635770500616</updated>
+    </task>
+    <task id="LOCAL-00005" summary="nginx">
+      <created>1635779319159</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635779319159</updated>
+    </task>
+    <task id="LOCAL-00006" summary="调整目录">
+      <created>1635808303744</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635808303744</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Keepalived高可用">
+      <created>1635810107683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1635810107683</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="忽略" />
+    <MESSAGE value="nginx" />
+    <MESSAGE value="调整目录" />
+    <MESSAGE value="Keepalived高可用" />
+    <option name="LAST_COMMIT_MESSAGE" value="Keepalived高可用" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="896" y="537" key="#Notifications" timestamp="1635779340392">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="896" y="537" key="#Notifications/0.0.2560.1400@0.0.2560.1400" timestamp="1635779340392" />
+    <state x="1435" y="418" key="FileChooserDialogImpl" timestamp="1635810039082">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1435" y="418" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1635810039082" />
+    <state x="1111" y="315" key="Vcs.Push.Dialog.v2" timestamp="1635810112663">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1111" y="315" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1635810112663" />
+    <state x="1245" y="162" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1635778453936">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1245" y="162" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1635778453936" />
+    <state x="1376" y="540" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1635770576016">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1376" y="540" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1635770576016" />
+    <state x="1451" y="300" width="840" height="1034" key="search.everywhere.popup" timestamp="1635776467316">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1451" y="300" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1635776467316" />
+  </component>
+</project>
