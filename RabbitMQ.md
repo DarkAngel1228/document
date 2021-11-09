@@ -105,4 +105,5 @@ RabbitMQ 有三种模式：`单机模式`，`普通集群模式`，`镜像集群
     - 数据提交前要向服务的申请token，token放到redis或jvm内存，token有效时间
     - 提交后后台校验token，同时删除token，生成新的token返回
 
-token特点:要申请，一次有效性，可以限流
+  - token特点:要申请，一次有效性，可以限流
+- 利用redis原子性
