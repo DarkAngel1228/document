@@ -107,3 +107,6 @@ RabbitMQ 有三种模式：`单机模式`，`普通集群模式`，`镜像集群
 
   - token特点:要申请，一次有效性，可以限流
 - 利用redis原子性
+
+### Elastic-Job——分布式定时任务框架
+elastic-job + zookeeper + mysql
