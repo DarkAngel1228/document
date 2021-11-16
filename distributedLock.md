@@ -30,7 +30,7 @@ select 语句 + for update   # 加锁
 
 
 
-### 基于redis实现
+### 基于redis实现-redisson
 
 ```java
 # SET resource_name my_random_value NX PX 30000
@@ -77,7 +77,7 @@ select 语句 + for update   # 加锁
         return "";
 ```
 
-### 基于zookeeper
+### 基于zookeeper-curator
 
 ```
 # zookeeper分布式锁恰恰应用了临时顺序节点
