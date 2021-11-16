@@ -80,7 +80,7 @@ select 语句 + for update   # 加锁
 ### 基于zookeeper-curator
 
 ```
-# zookeeper分布式锁恰恰应用了临时顺序节点
+# zookeeper分布式锁恰恰应用了临时顺序节点，瞬时有序。
 # 实现等待队列
 ```
 
