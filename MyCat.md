@@ -39,19 +39,21 @@ sql解析 ->数据源分配 -> 请求响应 -> 结果整合
 - 善用全局表
 - 在sql上添加注解/*!mycat:catlet=io.mycat.catlets.ShareJoin */
 
-###  Mycat中全局ID方案有哪些？程序自定义全局ID的方案有哪些？
-- mycat的全局id方案
-  - 本地文件方式 sequnceHandlerType = 0
-  - 配置sequence_conf.properties
-  - 使用next value for MYCATSEQ_XXX
-- 数据库方式
-sequnceHandlerType = 1
-配置sequence_db_conf.properties
-使用next value for MYCATSEQ_XXX或者指定autoIncrement
-- 程序方式
-  - Snowflake
-  - UUID
-  - Redis
+
+
+### 分布式ID都有哪些生成方式？
+
+- UUID
+不适用于实际的业务需求
+- 数据库自增ID
+- 数据库多主模式
+- 号段模式
+- Redis
+- 雪花算法（SnowFlake）
+Snowflake ID组成结构：正数位（占1比特）+ 时间戳（占41比特）+ 机器ID（占5比特）+ 数据中心（占5比特）+ 自增值（占12比特），总共64比特组成的一个Long类型。
+- 滴滴出品（TinyID）
+- 百度 （Uidgenerator）
+- 美团（Leaf）
 
 
 ### mycat是怎样实现分库分表的？
@@ -69,3 +71,4 @@ mycat里面通过定义路由规则来（路由规则里面会定义分片字段
 ### Mycat 如何对旧分片数据迁移或扩容，支持自动扩容么？
 
 目前除了一致性 hash 规则分片外其他数据迁移比较困难，目前暂时可以手工迁移，未提供自动迁移方案。
+
