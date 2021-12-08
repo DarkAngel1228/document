@@ -1,4 +1,4 @@
-###LVS负载均衡简介
+### LVS负载均衡简介
 LVS（Linux Virtual Server）即Linux虚拟服务器。
 是由章文嵩博士主导的开源负载均衡项目，目前LVS已经被集成到Linux内核模块中。该项目在Linux内核中实现了基于IP的数据请求负载均衡调度方案。
 
